@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <pre>
+<h4>Q.find the sum</h4>
+const Find_Prod = (array, N) => 
+{
+ let otpt = 1
+ for(let i=0; i < N; i++) 
+ { 
+  otpt = otpt * array[i];
+}
+return(otpt);
+};
+
+
+
+<h4>Q.find the product</h4>
+const Find_Sum = (array, N) => 
+{
+  let otpt = 0
+ for(let i=0; i < N; i++) 
+ { 
+    otpt = otpt + array[i];
+ }
+return(otpt);
+
+};
+
+<h4>Q.count occurrence</h4>
+const findCount = (N, K, Arr) => 
+{
+   let otpt = 0
+   for(let i=0; i < N; i++) 
+  { 
+    if(Arr[i]==K)
+    otpt++
+  }
+   return(otpt); 
+};
+ 
+<h4>Q.even odd</h4>
+const findEvenOdd = (N, Arr) => 
+{
+   let B=[0,0]
+   for(let i=0; i < N; i++) 
+  { 
+    if(Arr[i]%2==0)
+    {
+      B[0]=B[0]+Arr[i]
+    }
+    else
+    {
+      B[1]=B[1]+Arr[i]
+    }
+    
+  }
+   return(B); 
+};
+
+
+
+<h4>Q.find whether the number is present or not</h4>
+const Find_Num = (array,N,M) => 
+{
+  let p=false
+  for(let i=0 ;i < N; i++)
+  {
+    if(array[i]==M)
+    {
+      p=true
+      break;
+    }
+  }
+  if(p)
+  {
+    return("YES")
+  }
+  else
+  {
+    return("NO")
+  }
+};
+ 
+
+<h4>Q.higher age</h4>
+const Find_Num = (array,N,M) => 
+{
+  let p=false
+  for(let i=0 ;i < N; i++)
+  {
+    if(array[i]==M)
+    {
+      p=true
+      break;
+    }
+  }
+  if(p)
+  {
+    return("YES")
+  }
+  else
+  {
+    return("NO")
+  }
+};
+ 
+
+<h4>Q.increment the array element</h4>
+const Inc_Arr = (array,N) => 
+{
+  let arr=[]
+  for(let i=0;i < N;i++)
+  {
+    arr.push(array[i]+1)
+  }
+  console.log(...arr)
+
+};
+
+
+<h4>Q.pass or fail</h4>
+const isAllPass = (N, Arr) => 
+{
+  let p=true
+   for(let i=0; i < N; i++)
+   {
+     if(Arr[i] < 32)
+     {
+       p= false;
+       break;
+     }
+   }
+   if(p)
+   {
+     return('yes')
+   }
+   else
+   {
+     return('no')
+   }
+};
+
+<h4>Q.unique color shirt</h4>
+function Unique_Shirts (arr,N) {
+  arr=arr.sort()
+  let count=0
+  for(let i=0; i < N;i++)
+  {
+   if((arr[i-1]===arr[i]||(arr[i]===arr[i+1]))) 
+   {
+     count++
+   }
+  }
+ return(N-count)
+}
+<h4>Q.min and max</h4>
+function arrayMin(arr) {
+  let b=[]
+  b[0]=arr[0]
+  let x=arr
+ for(let i=1;i<arr.length;i++)
+ {
+   if(x[i] < b[0])
+   {
+     b[0]=x[i];
+   }
+ }
+ return b[0]
+}
+
+function arrayMax(arr) {
+let b=[]
+b[1]=arr[0]
+let y=arr
+ for(let j=1;j < arr.length;j++)
+ {
+   if(y[j]>b[1])
+   {
+     b[1]=y[j];
+   }
+ }
+ return b[1]
+}
+
+<h4>Q.birthday game</h4>
+function Birthday_Game(arr,D ,M) {
+ 
+  let counter = 0;
+   for(let i = 0; i < arr.length - 1; i++){
+        let subArray = arr.slice(i, i+M);
+        if (subArray.length === M) {
+           let sum = subArray.reduce((a,b) => a + b, 0);
+           if(sum === D){
+                counter += 1;
+            }
+         }
+   }
+   return counter;
+}
+</pre>
+</body>
+</html>
